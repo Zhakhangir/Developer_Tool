@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DeveloperTool'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'UI tools'
   s.description      = 'Developer Tool for Berekebank BBusiness'
   s.homepage         = 'https://github.com/Zhakhangir'
