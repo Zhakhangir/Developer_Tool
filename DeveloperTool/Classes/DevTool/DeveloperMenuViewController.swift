@@ -50,10 +50,12 @@ class DeveloperMenuViewController: UIViewController {
     private func configureTableView() {
         view.addSubview(tableView)
         
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MenuItemCell")
         tableView.backgroundColor = .clear
         tableView.dataSource =  self
         tableView.delegate = self
         
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

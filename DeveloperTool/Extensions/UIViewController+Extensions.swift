@@ -11,7 +11,8 @@ extension UIViewController {
     
     open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if case .motionShake = motion {
-            present(DeveloperToolManager.shared.menuController, animated: true)
+            DeveloperToolManager.shared.menuController.modalPresentationStyle = .fullScreen
+            present(DeveloperToolManager.shared.menuController.embedInNavigation(), animated: true)
         }
     }
 }

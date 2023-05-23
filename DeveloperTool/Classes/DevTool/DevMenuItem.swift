@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import NotificationCenter
 
 public protocol IDevMenuItem {
     var title: String { get }
@@ -20,7 +19,7 @@ public struct DevMenuItem: IDevMenuItem {
     
     public var action: () -> UIViewController
     
-    init(title: String, action: @escaping () -> UIViewController) {
+    public init(title: String, action: @escaping () -> UIViewController) {
         self.title = title
         self.action = action
     }
